@@ -38,9 +38,7 @@ async function loadFakeData(numUsers = 10) {
                 }
             }
         }
-
-
-
+        
         await client.query("commit")
 
     } catch (error) {

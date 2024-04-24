@@ -1,0 +1,8 @@
+INSERT INTO public.users(username, password, avatar) VALUES ('tester', '12345', 'abcd');
+select * from public.users
+
+
+
+DROP TABLE public.users CASCADE;
+DROP TABLE public.comments CASCADE;
+DROP TABLE public.posts CASCADE;
