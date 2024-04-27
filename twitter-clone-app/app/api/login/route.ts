@@ -17,7 +17,6 @@ export async function POST(request:Request){
         return NextResponse.json({error: "invalid credentials"}, {status:401});
     }
     const token = await new SignJWT({}).setProtectedHeader({alg:"HS256"}).setSubject(user.id).setIssuedAt().setExpirationTime("2w").sign(new TextEncoder().encode("my-secret-jwt"))
-    ;
     const response = NextResponse.json({msg: "login success"})
     response.cookies.set("jwt-token", token, {sameSite:"strict", httpOnly:true, secure:true})
     return response;
