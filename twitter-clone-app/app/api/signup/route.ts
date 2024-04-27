@@ -6,7 +6,7 @@ export async function POST(request: Request) {
     try {
         const json = await request.json();
         const result = await sql("SELECT id, username FROM users WHERE username ILIKE $1", [json.username]);
-        if (result.rowCount > 0) {
+        if (result.rowCount && result.rowCount > 0) {
             return NextResponse.json({ error: "User already exists"}, {status:400});
         }
         const saltRounds = 10;
