@@ -14,8 +14,10 @@ function Form() {
     async function handleSubmit(e: FormEvent) {
         e.preventDefault();
         setErrors([])
+        const newError = []
         if(password!=confirmPassword){
-            errors.push("Passwords do not match")
+            newError.push("Passwords do not match")
+            setErrors(newError);
             return
         }
         const res = await fetch("/api/signup",{
@@ -57,6 +59,13 @@ function Form() {
             </div>
             <div className="text-center">
             <button className="mt-4 bg-slate-800 text-white p-3 rounded-lg" type="submit">Sign Up</button>
+            {errors.map((error)=>{
+                return(
+                    <div key ={error} className="text-red-600">
+                        {error}
+                   </div>
+                )
+            })}
             </div>
         </form>
     );
