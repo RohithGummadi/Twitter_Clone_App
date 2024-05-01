@@ -16,4 +16,4 @@ async function loadAdminUser(username:string, password: string){
 const username = process.argv[2]
 const password = process.argv[3]
 
-loadAdminUser(username, password)
+loadAdminUser("adminUser", "12345")

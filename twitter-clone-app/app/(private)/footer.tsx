@@ -1,7 +1,7 @@
 export default function Footer(){
     return (
         <nav>
-            footer
+            &copy; Twitter-clone {new Date().getFullYear()}
         </nav>
     )
 }
