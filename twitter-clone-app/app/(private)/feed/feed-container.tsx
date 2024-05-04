@@ -13,8 +13,8 @@ function FeedContainer(){
     return (
         <div>
             {pages}
-            <div className="flex justify-center">
-                <button className="p-2 rounded-lg self-center" onClick={()=>setCnt(cnt+1)} >
+            <div className="bg-blue-400 m flex justify-center">
+                <button className="p-2 rounded-lg" onClick={()=>setCnt(cnt+1)} >
                     Load More 
                 </button>
             </div>
