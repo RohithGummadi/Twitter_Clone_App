@@ -18,7 +18,7 @@ export async function GET(
     return NextResponse.json({ data: res.rows[0] });
   } catch (error) {
     console.error("Error:", error);
-    return NextResponse.error(error);
+    return NextResponse.error();
   }
 }
 
@@ -46,7 +46,7 @@ export async function PATCH(
     return NextResponse.json({ msg: "update success" });
   } catch (error) {
     console.error("Error:", error);
-    return NextResponse.error(error);
+    return NextResponse.error();
   }
 }
 
