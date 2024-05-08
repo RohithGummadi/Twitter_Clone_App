@@ -1,9 +1,13 @@
+"use client"
+import FollowingContainer from "./following-container";
+
 export default async function Following(){
     return (
         <main>
-            <h1>
+            <h2>
                 Following
-            </h1>
+            </h2>
+            <FollowingContainer/>
         </main>
     )
 }
