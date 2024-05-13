@@ -17,6 +17,13 @@ export async function GET(request:Request){
 
     if (username){
         //TODO
+        const userRes = await sql("select * from users where username=$1", [username])
+        if (userRes.rowCount==0) {
+            return NextResponse.json({error:"not found"}, {status:404})
+        }
+        const user = userRes.rows[0]
+        const postsRes = await sql(statement, [user.id, limit, offset])
+        return NextResponse.json({data:postsRes.rows})
     }
 
     const res= await sql(statement, [jwtPayload.sub, limit, offset])
@@ -31,6 +38,5 @@ export async function POST(request: Request){
     const res = await sql("insert into posts (user_id, content) values ($1, $2) returning *", [jwtPayload.sub, content])
 
     return NextResponse.json({data:res.rows[0]}, {status:201})
-
 
 }
