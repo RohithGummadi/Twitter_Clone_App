@@ -5,6 +5,7 @@ import Footer from "./footer";
 import { SWRConfig } from "swr";
 import fetcher from "../util/fetcher";
 import SearchBar from "./search-bar";
+import Image from "next/image";
 
 
 export default function PrivateLayout(
@@ -12,7 +13,7 @@ export default function PrivateLayout(
 {
     return(
         <SWRConfig value={{fetcher:fetcher}}>
-            <div className="flex flex-col min-h-screen max-w-md m-auto items-center justify-center" >
+            <div className="flex flex-col min-h-screen max-w-md m-auto items-center justify-center">
                 <SearchBar/>
                 <Header/>
                 <NavBar/>
