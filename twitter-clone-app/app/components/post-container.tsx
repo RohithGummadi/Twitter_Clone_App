@@ -21,7 +21,7 @@ function PostContainer({username}:{username:string}){
             </div>
         </div>
     )
-
+    
 }
 
 export default PostContainer
