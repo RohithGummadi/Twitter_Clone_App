@@ -18,7 +18,7 @@ export async function POST(request: Request){
     const jwtPayload = await getJWTPayload();
     const json = await request.json();
     const res = await sql("select * from follows where user_id = $1 and follower_id = $2", [json.user_id, jwtPayload.sub])
-    if(res.rowCount>0){
+    if(res.rowCount!>0){
         return NextResponse.json({error:"already following"}, {status:409})
 
     }
