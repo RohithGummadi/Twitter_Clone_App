@@ -1,6 +1,7 @@
 "use client"
 import { FormEvent, useState } from "react";
 import { useSWRConfig } from "swr";
+import { useRouter } from "next/router";
 
 
 function Form(){
@@ -24,7 +25,6 @@ function Form(){
             <textarea className="bg-gray-700 p-2 rounded-lg my-2 w-full " placeholder="What is Happening?" onChange={(e)=>{setPost(e.target.value)}} value = {post}/>
 
             <button type="submit" className="bg-slate-500 p-2 rounded-lg self-center">
-             
                 Post
             </button>
         </form>

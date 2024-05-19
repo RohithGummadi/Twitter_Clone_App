@@ -4,7 +4,6 @@ import { useRouter } from "next/navigation";
 
 function Form({post}:{post:PostI}){
     const router = useRouter();
-    const {mutate} = useSWRConfig();
     const [content, setContent] = useState(post.content);
     console.log(content)
 

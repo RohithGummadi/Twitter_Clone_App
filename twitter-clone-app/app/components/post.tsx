@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-function Post({post}:{post:PostI}){
+function Post({post, showEditBtn}:{post:PostI, showEditBtn?:boolean}){
     const options: Intl.DateTimeFormatOptions = {
         year: "numeric",
         month:"long",
@@ -37,8 +37,15 @@ function Post({post}:{post:PostI}){
                             {post.content}
                         </div>
                 </div>
-
-
+                    {
+                        showEditBtn && (
+                            <div className= "text-right flex-grow">
+                                <Link className="text-green-600" href={(`profile/edit-post/${post.id}`)}>
+                                    Edit
+                                </Link>
+                            </div>
+                        )
+                    }
         </div>
     )
 
