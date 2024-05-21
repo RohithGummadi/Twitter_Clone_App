@@ -58,7 +58,7 @@ function Form() {
                 <input className ="text-black p-3 border border-slate-700 rounded-lg" type="confirm password" value={confirmPassword} id="confirm-password" onChange={(e) => setConfirmPassword(e.target.value)} required placeholder="Confirm Password" />
             </div>
             <div className="text-center">
-            <button className="mt-4 bg-slate-800 text-white p-3 rounded-lg" type="submit">Sign Up</button>
+            <button className="mt-4 dark:bg-slate-800 bg-slate-300 text-white p-3 rounded-lg" type="submit">Sign Up</button>
             {errors.map((error)=>{
                 return(
                     <div key ={error} className="text-red-600">

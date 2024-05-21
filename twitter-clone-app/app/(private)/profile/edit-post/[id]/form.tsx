@@ -23,9 +23,9 @@ function Form({post}:{post:PostI}){
 
     return (
         <form onSubmit={handleSubmit}>
-            <textarea className="bg-gray-700 p-2 rounded-lg w-full my-2" placeholder="What is happening?" value={content} onChange={(e)=>{setContent(e.target.value)}}/>
+            <textarea className="bg-gray-600 p-2 rounded-lg w-full my-2" placeholder="What is happening?" value={content} onChange={(e)=>{setContent(e.target.value)}}/>
 
-            <button type="submit" className="bg-slate-900 p-2 rounded-lg">Update Post</button>
+            <button type="submit" className="bg-slate-600 p-2 rounded-lg">Update Post</button>
         </form>
     )    
 }

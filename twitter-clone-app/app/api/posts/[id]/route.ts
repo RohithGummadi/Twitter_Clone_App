@@ -24,7 +24,7 @@ export async function GET(
 
 export async function PATCH(
   request: Request,
-  { params }: { params: { id: number } }
+  { params }: {params:{id: number}}
 ) {
   try {
     const body = await request.json();

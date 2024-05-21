@@ -16,7 +16,7 @@ export default async function PublicFeed(){
             </div>
             <div>
                 {posts.map((post)=>{
-                    return <Post post={post}/>
+                    return <Post post={post} key={post.id}/>
                 })}
             </div>
         </main>

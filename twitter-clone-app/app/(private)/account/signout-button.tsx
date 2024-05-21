@@ -13,7 +13,7 @@ export default function SignoutButton(){
     }
     return (
         <div>
-            <button onClick={SignOut} className="text-green-400 underline p-2 rounded-lg my-5">Signout</button>
+            <button onClick={SignOut} className="text-green-500 underline p-2 rounded-lg my-5">Signout</button>
 
         </div>
     )

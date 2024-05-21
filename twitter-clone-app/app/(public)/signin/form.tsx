@@ -42,7 +42,7 @@ function Form() {
                 <input className ="text-black p-3 border border-slate-700 rounded-lg" type="password" value={password} id="password" onChange={(e) => setPassword(e.target.value)} required placeholder="Password" />
             </div>
             <div className="text-center">
-            <button className="mt-4 bg-slate-800 text-white p-3 rounded-lg" type="submit">Submit</button>
+            <button className="mt-4 dark:bg-slate-800 bg-slate-800 text-white p-3 rounded-lg" type="submit">Submit</button>
             </div>
         </form>
     );

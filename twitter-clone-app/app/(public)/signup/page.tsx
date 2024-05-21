@@ -2,7 +2,7 @@
 import Form from "./form";
 
 
-export default  async function SignUp(){
+export default  function SignUp(){
     return (
         <div>
             <Form/>
