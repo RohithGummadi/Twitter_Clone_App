@@ -6,7 +6,7 @@ export default function Home() {
 
         <div className="flex flex-col">
             <div className="font-bold text-orange-600 m-5 text-xl ml-5">
-                <h1>Welcome to ChirpChat</h1>
+                <h1>Welcome to ChirpChat!</h1>
             </div>
 
             <div className="flex flex-col gap-2 p-5 max-w-xs w-full bg-slate-500 rounded-lg">
